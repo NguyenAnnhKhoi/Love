@@ -34,7 +34,7 @@
 
     const gameId = LoveGame.storage.getGameId();
     if (!gameId) {
-      LoveGame.navigate('/index.html');
+      LoveGame.navigate('index.html');
       return;
     }
 
