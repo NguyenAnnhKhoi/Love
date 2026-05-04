@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Love Game | Nhập tên</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="index">
+  <main class="page-shell">
+    <section class="phone-frame glass-card soft-panel phone-stage">
+      <div class="page-hero section-card compact">
+        <div class="flex items-start justify-between gap-4">
+            <div class="space-y-3 max-w-[240px]">
+            <div class="mini-tag floating-note w-fit" data-start-badge>💘</div>
+            <h1 class="hero-title text-4xl leading-tight playful">Này em, muốn thử xem anh lầy tới đâu không?</h1>
+          </div>
+          <div class="hero-orb small"></div>
+        </div>
+        <p class="muted-copy leading-7">Một chuỗi câu hỏi nhẹ nhàng dẫn bạn tới đoạn cuối cùng.</p>
+      
+      </div>
+
+      <div class="section-card glass-card">
+        <form class="space-y-5" data-start-form>
+          <div class="space-y-3">
+            <h2 class="hero-title text-3xl leading-tight">Nhập tên của bạn</h2>
+            <p class="muted-copy leading-7">Tên sẽ được dùng xuyên suốt game để mọi lời nhắn trở nên gần gũi hơn.</p>
+          </div>
+
+          <div class="space-y-2">
+            <label class="text-sm text-white/70" for="playerName">Tên hiển thị</label>
+            <input id="playerName" class="input-field" data-player-name type="text" placeholder="Ví dụ: Linh, An, Vy..." autocomplete="name" />
+            <p class="text-sm text-red-200 is-hidden" data-form-error></p>
+          </div>
+
+          <button class="primary-btn w-full pulse-glow" type="submit">Bắt đầu hành trình</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/core.js"></script>
+  <script src="js/effects.js"></script>
+  <script src="js/pages/index.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

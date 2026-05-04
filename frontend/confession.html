@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Love Game | Tâm thư</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="confession">
+  <main class="page-shell">
+    <section class="phone-frame glass-card soft-panel phone-stage" data-confession-page>
+      <div class="section-card compact result-banner flex items-center justify-between gap-4">
+        <div>
+          <p class="status-pill mb-3">Trang phần thưởng</p>
+          <h1 class="hero-title text-3xl leading-tight" data-reward-title>Phần thưởng</h1>
+        </div>
+        <div class="success-mark text-3xl pulse-glow" data-result-mark>✦</div>
+      </div>
+
+      <div class="section-card glass-card space-y-4">
+        <div class="space-y-4">
+          <p class="muted-copy leading-7 text-lg" data-reward-text></p>
+          <button class="primary-btn w-full" type="button" data-reveal-letter>Mở tâm thư</button>
+        </div>
+      </div>
+
+      <div class="section-card glass-card is-hidden letter-reveal" data-letter-panel>
+        <div class="space-y-4">
+          <p class="mini-tag">Tâm thư</p>
+          <h2 class="hero-title text-2xl" data-letter-title></h2>
+          <div class="letter-box text-white/82 text-base" data-letter-body></div>
+        </div>
+      </div>
+
+      <div class="section-card glass-card is-hidden" data-proposal-buttons>
+        <div class="space-y-5">
+          <p class="status-pill">Câu hỏi tỏ tình</p>
+          <h2 class="hero-title text-3xl leading-snug" data-proposal-title></h2>
+          <div class="button-row two-up">
+            <button class="primary-btn" type="button" data-yes-button>Yes</button>
+            <button class="ghost-btn no-btn" type="button" data-no-button>No</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/core.js"></script>
+  <script src="js/effects.js"></script>
+  <script src="js/pages/confession.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+C:\Users\lionj\Downloads\Love\backend\src\main\java\com\lovegame\config\CorsConfig.java
+C:\Users\lionj\Downloads\Love\backend\src\main\java\com\lovegame\controller\GameController.java
+C:\Users\lionj\Downloads\Love\backend\src\main\java\com\lovegame\dto\AnswerRequest.java
+C:\Users\lionj\Downloads\Love\backend\src\main\java\com\lovegame\dto\AnswerResponse.java
+C:\Users\lionj\Downloads\Love\backend\src\main\java\com\lovegame\dto\GameStateResponse.java
+C:\Users\lionj\Downloads\Love\backend\src\main\java\com\lovegame\dto\LetterResponse.java
+C:\Users\lionj\Downloads\Love\backend\src\main\java\com\lovegame\dto\ProposalChoiceRequest.java
+C:\Users\lionj\Downloads\Love\backend\src\main\java\com\lovegame\dto\ProposalResponse.java
+C:\Users\lionj\Downloads\Love\backend\src\main\java\com\lovegame\dto\ResultResponse.java
+C:\Users\lionj\Downloads\Love\backend\src\main\java\com\lovegame\dto\RewardResponse.java
+C:\Users\lionj\Downloads\Love\backend\src\main\java\com\lovegame\dto\StartGameRequest.java
+C:\Users\lionj\Downloads\Love\backend\src\main\java\com\lovegame\dto\StartGameResponse.java
+C:\Users\lionj\Downloads\Love\backend\src\main\java\com\lovegame\LoveGameApplication.java
+C:\Users\lionj\Downloads\Love\backend\src\main\java\com\lovegame\model\GameQuestion.java
+C:\Users\lionj\Downloads\Love\backend\src\main\java\com\lovegame\model\GameState.java
+C:\Users\lionj\Downloads\Love\backend\src\main\java\com\lovegame\service\GameService.java

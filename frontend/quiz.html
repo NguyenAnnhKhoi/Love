@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Love Game | Quiz</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="quiz">
+  <main class="page-shell">
+    <section class="phone-frame glass-card soft-panel phone-stage" data-quiz-page>
+      <div class="section-card glass-card compact flex items-center justify-between gap-4">
+        <div>
+          <p class="status-pill mb-3">Trang bắt đầu game</p>
+          <h1 class="hero-title text-3xl leading-tight">Chào, <span data-player-name-display>bạn</span></h1>
+        </div>
+        <div class="w-full max-w-[120px] text-right">
+          <span class="text-sm text-white/65" data-question-index>0 / 10</span>
+        </div>
+      </div>
+
+      <div class="section-card glass-card space-y-5">
+        <div class="flex items-center gap-3">
+          <div class="progress-track flex-1">
+            <div class="progress-fill" data-progress-fill style="width:0%"></div>
+          </div>
+          <span class="text-xs text-white/55">Tiến độ</span>
+        </div>
+
+        <div class="glass-card section-card compact" data-intro-card>
+          <div class="space-y-4">
+            <p class="mini-tag">Luật chơi nhẹ nhàng, không áp lực</p>
+            <h2 class="hero-title text-3xl leading-tight">Sẵn sàng đi qua 10 câu hỏi nhỏ chưa?</h2>
+            <p class="muted-copy leading-7">Mỗi câu trả lời đúng sẽ mở câu tiếp theo. Câu hỏi được làm đủ dễ để cuộc chơi giữ nhịp vui, không biến thành bài kiểm tra.</p>
+          </div>
+          <div class="mt-6">
+            <button class="primary-btn w-full" type="button" data-begin-quiz>Bắt đầu ngay</button>
+          </div>
+          <p class="text-sm text-white/55 mt-4" data-intro-hint>Hãy bấm bắt đầu để mở câu hỏi đầu tiên.</p>
+        </div>
+
+        <div class="glass-card section-card compact is-hidden" data-question-card>
+          <div class="space-y-5">
+            <div class="flex items-center justify-between gap-4">
+              <p class="status-pill">Câu hỏi</p>
+              <p class="text-sm text-white/60" data-question-index></p>
+            </div>
+            <h2 class="hero-title text-2xl leading-snug" data-question-title></h2>
+                        <div class="w-full h-40 rounded-2xl overflow-hidden bg-gradient-to-br from-pink-500/10 to-orange-500/10 flex items-center justify-center" data-question-gif>
+                          <img src="" alt="" style="max-width:100%;max-height:100%;object-fit:contain;" />
+                        </div>
+            <p class="text-sm text-white/65 is-hidden" data-question-feedback></p>
+            <div class="grid gap-3" data-answers></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/core.js"></script>
+  <script src="js/effects.js"></script>
+  <script src="js/pages/quiz.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
