@@ -56,8 +56,7 @@ public class GameService {
         }
 
         GameQuestion question = questions.get(state.getCurrentQuestionIndex());
-        int correctIdx = question.correctAnswerIndex();
-        boolean correct = (correctIdx < 0) || (correctIdx == answerIndex);
+        boolean correct = question.correctAnswerIndex() == answerIndex;
         state.addAnswer(answerIndex);
 
         if (correct) {
@@ -219,7 +218,7 @@ public class GameService {
 
         result.add(new GameQuestion(5, "Câu hỏi cho ĐẠI KA KHÔI : \"ELM có yêu tôi hayy ko\"?",
             List.of("Có", "YES", "A", "B"),
-            -1, "Đáp án: ABCD đều đúng ."));
+            0, "Đáp án: ABCD đều đúng ."));
 
         result.add(new GameQuestion(6, "Yêu hay không nó ở đây này! Ngày hôm ấy cùng vị trí này là ngày bao nhiêu?",
             List.of("23/4/2025", "24/3/2025", "23/4/2026", "24/3/2026"),
