@@ -51,9 +51,9 @@
 
     try {
       const [reward, letter, proposal] = await Promise.all([
-        LoveGame.api.reward(gameId),
-        LoveGame.api.letter(gameId),
-        LoveGame.api.proposal(gameId)
+        LoveGame.game.reward(gameId),
+        LoveGame.game.letter(gameId),
+        LoveGame.game.proposal(gameId)
       ]);
 
       LoveGame.view.swapText(rewardTitle, reward.title);
@@ -76,8 +76,8 @@
         LoveGame.storage.setResultChoice('YES');
         LoveGame.fx.playTone('success');
         LoveGame.fx.confettiBurst({ count: 110, spread: 160 });
-        await LoveGame.api.submitResult(gameId, 'YES');
-        LoveGame.navigate('/success.html', 220);
+        await LoveGame.game.submitResult(gameId, 'YES');
+        LoveGame.navigate('success.html', 220);
       });
 
       noButton.addEventListener('pointerenter', () => nudgeNoButton(noButton));
@@ -95,7 +95,7 @@
           LoveGame.storage.setResultChoice('NO');
           LoveGame.fx.playTone('error');
           LoveGame.fx.confettiBurst({ count: 20, spread: 60 });
-          await LoveGame.api.submitResult(gameId, 'NO');
+          await LoveGame.game.submitResult(gameId, 'NO');
           LoveGame.navigate('sad.html', 220);
         }
       });

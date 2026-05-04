@@ -35,14 +35,13 @@
       }
 
       try {
-        const payload = await LoveGame.api.startGame(playerName);
-        LoveGame.storage.setGameId(payload.gameId);
+        const payload = await LoveGame.game.startGame(playerName);
         LoveGame.fx.playTone('success');
         LoveGame.fx.confettiBurst({ count: 24, spread: 120 });
-        LoveGame.navigate(LoveGame.resolveRoute(payload.redirectUrl || '/quiz.html'), 220);
+        LoveGame.navigate(LoveGame.resolveRoute(payload.redirectUrl || 'quiz.html'), 220);
       } catch (error) {
         if (errorBox) {
-          errorBox.textContent = 'Không kết nối được backend. Hãy kiểm tra cổng 8080 đang chạy.';
+          errorBox.textContent = 'Không khởi động được game. Hãy thử lại sau nhé.';
           errorBox.classList.remove('is-hidden');
         }
         LoveGame.fx.playTone('error');

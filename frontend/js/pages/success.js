@@ -15,7 +15,7 @@
     }
 
     const choice = LoveGame.storage.getResultChoice();
-    const result = await LoveGame.api.result(gameId);
+    const result = await LoveGame.game.result(gameId);
     const finalChoice = choice || result.choice;
 
     LoveGame.view.swapText(LoveGame.$('[data-result-title]'), finalChoice === 'YES' ? 'Chúc mừng! Em đã chính thức có người yêu là anh 😎❤️' : 'Mình trân trọng câu trả lời của bạn');

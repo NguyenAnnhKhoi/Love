@@ -27,8 +27,8 @@
     const answersWrap = LoveGame.$('[data-answers]');
     const questionCard = LoveGame.$('[data-question-card]');
     const introCard = LoveGame.$('[data-intro-card]');
-    const feedback = LoveGame.$('[data-question-feedback]');
-  const gifContainer = LoveGame.$('[data-question-gif]');
+      const feedback = LoveGame.$('[data-question-feedback]');
+      const gifContainer = LoveGame.$('[data-question-gif]');
 
     if (!question || !answersWrap) return;
 
@@ -73,7 +73,7 @@
     });
 
     try {
-      const response = await LoveGame.api.answer(gameId, answerIndex);
+      const response = await LoveGame.game.answer(gameId, answerIndex);
       const pickedButton = button;
 
       if (pickedButton) {
@@ -95,7 +95,7 @@
 
       if (response.completed) {
         window.setTimeout(() => {
-          LoveGame.navigate('/confession.html', 120);
+          LoveGame.navigate('confession.html', 120);
         }, 750);
         return;
       }
@@ -140,7 +140,7 @@
     const questionCard = LoveGame.$('[data-question-card]');
 
     try {
-      const state = await LoveGame.api.getState(gameId);
+      const state = await LoveGame.game.getState(gameId);
 
       LoveGame.view.hide(questionCard);
 
@@ -158,7 +158,7 @@
       }
     } catch (error) {
       if (introHint) {
-        introHint.textContent = 'Không thể tải trạng thái game. Hãy kiểm tra backend đang chạy ở cổng 8080.';
+        introHint.textContent = 'Không thể tải trạng thái game. Hãy thử tải lại trang.';
       }
       LoveGame.fx.playTone('error');
     }

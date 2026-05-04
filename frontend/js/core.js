@@ -1,10 +1,6 @@
 (function (window) {
   const LoveGame = window.LoveGame || (window.LoveGame = {});
 
-  LoveGame.config = {
-    apiBase: 'http://localhost:8080/api/game'
-  };
-
   LoveGame.$ = (selector, root = document) => root.querySelector(selector);
   LoveGame.$$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
 
@@ -29,57 +25,6 @@
     }
   };
 
-  LoveGame.api = {
-    async requestJson(url, options = {}) {
-      const response = await fetch(url, {
-        headers: {
-          'Content-Type': 'application/json',
-          ...(options.headers || {})
-        },
-        ...options
-      });
-
-      if (!response.ok) {
-        const text = await response.text();
-        throw new Error(text || 'Request failed');
-      }
-
-      return response.json();
-    },
-    startGame(playerName) {
-      return LoveGame.api.requestJson(`${LoveGame.config.apiBase}/start`, {
-        method: 'POST',
-        body: JSON.stringify({ playerName })
-      });
-    },
-    getState(gameId) {
-      return LoveGame.api.requestJson(`${LoveGame.config.apiBase}/state?gameId=${encodeURIComponent(gameId)}`);
-    },
-    answer(gameId, answerIndex) {
-      return LoveGame.api.requestJson(`${LoveGame.config.apiBase}/answer`, {
-        method: 'POST',
-        body: JSON.stringify({ gameId, answerIndex })
-      });
-    },
-    reward(gameId) {
-      return LoveGame.api.requestJson(`${LoveGame.config.apiBase}/reward?gameId=${encodeURIComponent(gameId)}`);
-    },
-    letter(gameId) {
-      return LoveGame.api.requestJson(`${LoveGame.config.apiBase}/letter?gameId=${encodeURIComponent(gameId)}`);
-    },
-    proposal(gameId) {
-      return LoveGame.api.requestJson(`${LoveGame.config.apiBase}/proposal?gameId=${encodeURIComponent(gameId)}`);
-    },
-    result(gameId) {
-      return LoveGame.api.requestJson(`${LoveGame.config.apiBase}/result?gameId=${encodeURIComponent(gameId)}`);
-    },
-    submitResult(gameId, choice) {
-      return LoveGame.api.requestJson(`${LoveGame.config.apiBase}/result`, {
-        method: 'POST',
-        body: JSON.stringify({ gameId, choice })
-      });
-    }
-  };
 
   LoveGame.view = {
     reveal(element, className = 'is-visible') {
