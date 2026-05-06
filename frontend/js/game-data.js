@@ -132,7 +132,32 @@
       return {
         name,
         title: 'Tâm thư',
-        body: `${name},\n\nKhông biết từ khi nào, việc mỗi ngày được nói chuyện với em đã trở thành điều mà anh mong chờ nhất. Có những lúc chỉ là vài câu hỏi thăm đơn giản thôi, nhưng với anh lại là cả một ngày vui.\n\nEm có thể không nhận ra, nhưng anh đã để ý em từ rất lâu rồi. Từ cách em cười, cách em nói chuyện, đến những lúc em vô tình dễ thương mà chính em cũng không biết.\n\nAnh không dám chắc mình là người hoàn hảo, cũng không dám hứa những điều quá xa xôi… nhưng anh chắc một điều là: anh sẽ luôn cố gắng để làm em vui, ở bên em khi em cần, và không để em phải một mình.\n\nAnh làm cái trang web này không phải để gây ấn tượng gì lớn lao, chỉ là muốn nói với em một cách đặc biệt hơn một chút…\n\nRằng là:\n\nAnh thương em.\n\nVà nếu được, anh muốn không chỉ dừng lại ở việc \"thương\" như bây giờ nữa…\n\nEm cho anh một cơ hội được ở bên em nha?`
+        body: `Cũng chẳng biết là từ bao giờ vào lúc nào mà việc mỗi ngày được nhắn tin trò chuyện đủ thứ trên đời đã trở thành một thói quen hằng ngày và đó lại là điều anh mong chờ nhất. Chắc là vào ngày ấy cái ngày mà anh được thấy những thứ thật nhất từ em, nó lại làm anh hẫng đi một nhịp " anh cũng không biết chuyện gì nữa, mà lúc ấy anh lại cố trấn an bản thân cơ "thế nó mới Hài", mà sau đó thì a lại muốn tiếp tục cơ lại muốn xa hơn bắt đầu tham lam hơn về thứ gọi là tình cảm, nhưng vẫn chưa bt sau khi ngày 1/1 mình lấy cái chủ đề hay câu chuyện để tiếp tục cơ 
+"Trộm vía " là mình cũng xàm cũng tào laooo :))
+Chắc đó lí do được trò chuyện với em tới h  
+
+Em có thể không nhận ra nhưng anh cũng cũng cài cắm vào mấy cái liên quan đến cái GU bạn trai này, quan điểm về tình yêu này 
+( liệt kê ra chắc cái web này chịu không nổi mất )
+
+Còn khoảng thời gian ..... , thì cho anh xin lỗi nha 
+lúc ấy chắc là bản nhân cách lo xa của anh nó chiếm hết tâm trí, giờ a vẫn khó mà chấp nhận bản thân khi đêm hôm ấy anh bắt đầu nói ra những thứ cấm cản mình rồi các kiểu, mà đêm ấy hụt hẫng thật sự không biết là anh có làm cho em buồn lây không ??
+Cảm giác khá khùng, ngố, điên, khi anh làm điều ấy với e 
+
+THÔI MÌNH ĐÀO NHẸ NHÀNG MÌNH BÙN MỘT CHÚT THÔI NHA
+
+Trọn vẹn đọc tới đây thì mình cũng đã ngồi lại với nhau rồi ha
+
+Anh không chắc mình sẽ là người hứa hay thề thốt gì cả nhưng anh vẫn muốn làm tất cả những gì trong khả năng để yêu em, có vẻ là hơi vội khi nói về tương lại nhưng thứ anh muốn là hiện tại là đơn giản chỉ là thằng BI có thể yêu có thể thương một người 
+
+Anh làm cái trang web này không phải để gây ấn tượng hay là phô trương, chỉ là muốn nói với em một cách đặc biệt hơn một chút…
+
+Rằng là:
+
+Anh thương em...
+
+Và nếu được, anh muốn không chỉ dừng lại ở việc "thích hay chỉ là yêu theo cảm xúc nhất thời" nữa mà hãy để anh được thương em, hãy để anh được yêu em theo cách của bản thân 
+
+Em cho anh một cơ hội được ở bên em nha?`
       };
     },
 
@@ -142,7 +167,8 @@
       const name = state.playerName || 'bạn';
       return {
         name,
-        question: 'Em cho phép anh được yêu em và làm boyfriend không? (không phải fake nhaaa 😭)',
+        question: 'Em cho phép anh được yêu em và làm người yêu của em nha?',
+        gifUrl: 'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2ZkaTN5NDFkdTA3NzBnM2c4MTgwYjRzeHFrZDRmZDJ6MXNoazFseSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/t8xgPfC5oNIRMrNooe/giphy.gif',
         yesText: 'YES 💖',
         noText: 'NO 😡'
       };
@@ -159,7 +185,7 @@
           choice: 'YES',
           title: 'Chúc mừng! Em đã chính thức có người yêu là anh 😎❤️',
           message: 'Anh rất vui vì em nói có.',
-          ctaText: 'Hãy tạo those đẹp lắm nha...'
+          ctaText: 'Hãy tạo những kỷ niệm đẹp hú hồn nha...'
         };
       }
       return {

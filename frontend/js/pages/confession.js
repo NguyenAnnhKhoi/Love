@@ -43,6 +43,7 @@
     const letterTitle = LoveGame.$('[data-letter-title]');
     const letterBody = LoveGame.$('[data-letter-body]');
     const proposalTitle = LoveGame.$('[data-proposal-title]');
+    const proposalGif = LoveGame.$('[data-proposal-gif]');
     const proposalButtons = LoveGame.$('[data-proposal-buttons]');
     const revealButton = LoveGame.$('[data-reveal-letter]');
     const yesButton = LoveGame.$('[data-yes-button]');
@@ -61,6 +62,13 @@
       LoveGame.view.swapText(letterTitle, letter.title);
       LoveGame.view.swapText(letterBody, letter.body);
       LoveGame.view.swapText(proposalTitle, proposal.question);
+      if (proposalGif) {
+        const img = proposalGif.querySelector('img');
+        if (img) {
+          img.src = proposal.gifUrl || '';
+          img.alt = 'GIF tỏ tình';
+        }
+      }
       LoveGame.view.hide(proposalButtons);
 
       revealButton.addEventListener('click', async () => {
